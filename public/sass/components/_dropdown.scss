@@ -17,6 +17,16 @@
   outline: 0;
 }
 
+.dropdown-desc {
+    position: relative;
+    top: -3px;
+    width: 250px;
+    font-size: 80%;
+    margin-left: 22px;
+    color: $gray-2;
+    white-space: normal;
+}
+
 // Dropdown arrow/caret
 // --------------------
 .caret {
@@ -67,18 +77,20 @@
   }
 
   // Links within the dropdown menu
-  > li > a {
-    display: block;
-    padding: 3px 20px 3px 15px;
-    clear: both;
-    font-weight: normal;
-    line-height: $line-height-base;
-    color: $dropdownLinkColor;
-    white-space: nowrap;
+  > li {
+      > a {
+      display: block;
+      padding: 3px 20px 3px 15px;
+      clear: both;
+      font-weight: normal;
+      line-height: $line-height-base;
+      color: $dropdownLinkColor;
+      white-space: nowrap;
 
-    i {
-      padding-right: 5px;
-      color: $link-color-disabled;
+      i {
+        padding-right: 5px;
+        color: $link-color-disabled;
+      }
     }
   }
 }
@@ -195,7 +207,7 @@
 }
 
 // Caret to indicate there is a submenu
-.dropdown-submenu > a:after {
+.dropdown-submenu > a::after {
   display: block;
   content: " ";
   float: right;
@@ -208,7 +220,7 @@
   margin-top: 5px;
   margin-right: -10px;
 }
-.dropdown-submenu:hover > a:after {
+.dropdown-submenu:hover > a::after {
   border-left-color: $dropdownLinkColorHover;
 }
 
